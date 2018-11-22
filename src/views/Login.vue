@@ -12,19 +12,13 @@
 export default {
     data() {
         return {
-            redirect: undefined
-        }
-    },
-    watch: {
-        '$route'(to, from) {
-            // 对路由变化作出响应...
-            console.log(1111)
+
         }
     },
     methods: {
         login() {
             sessionStorage.setItem('name', '好为')
-            this.$router.push({path: '/'})
+            this.$router.push({path: this.$route.query.redirect || '/'})
         }
     }
 }

@@ -12,6 +12,6 @@ router.beforeEach((to, from, next) => {
     if (apps.isLogined()) {
         next()
     } else {
-        to.path !== '/login' ? next(`/login?redirect=${to.path}`) : next()
+        to.path !== '/login' ? next({path: '/login', query: {redirect: to.path}}) : next()
     }
 })
