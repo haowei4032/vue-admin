@@ -10,22 +10,21 @@
 
 <script>
 export default {
-    name: 'Login',
     data() {
         return {
             redirect: undefined
         }
     },
     watch: {
-        $route(to, from) {
-            console.log(to, from)
+        '$route'(to, from) {
+            // 对路由变化作出响应...
+            console.log(1111)
         }
     },
     methods: {
         login() {
             sessionStorage.setItem('name', '好为')
-            alert(this.redirect)
-            //this.$router.push(this.redirect || '/')
+            this.$router.push({path: '/'})
         }
     }
 }
