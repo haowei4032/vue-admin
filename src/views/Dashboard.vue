@@ -4,7 +4,6 @@
 
 <script>
 export default {
-    name: 'Dashboard',
     data() {
         return {
             username: sessionStorage.getItem('name')
