@@ -1,5 +1,8 @@
 <template>
-    <div>{{username}}</div>
+    <div>
+        {{username}}
+        <button @onclick="logout">退出</button>
+    </div>
 </template>
 
 <script>
@@ -7,6 +10,12 @@ export default {
     data() {
         return {
             username: sessionStorage.getItem('name')
+        }
+    },
+    methods: {
+        logout() {
+            sessionStorage.removeItem('name')
+            this.$router.push({path: '/login'})
         }
     }
 }
