@@ -1,7 +1,7 @@
 <template>
     <div>
         {{username}}
-        <button @onclick="logout">退出</button>
+        <button @click="logout">退出</button>
     </div>
 </template>
 
