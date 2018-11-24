@@ -15,7 +15,7 @@ export default {
     methods: {
         logout() {
             sessionStorage.removeItem('name')
-            this.$router.push({path: '/login', query: { redirect: this.$route.path }})
+            this.$router.push({path: '/login', query: {redirect: this.$route.path}})
         }
     }
 }
