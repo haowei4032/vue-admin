@@ -7,7 +7,6 @@
 
 <script>
 export default {
-    name: 'Dashboard',
     data() {
         return {
             username: sessionStorage.getItem('name')
@@ -16,7 +15,7 @@ export default {
     methods: {
         logout() {
             sessionStorage.removeItem('name')
-            this.$router.push({path: '/login'})
+            this.$router.push({path: '/login', query: { redirect: this.$route.path }})
         }
     }
 }
