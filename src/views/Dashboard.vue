@@ -1,16 +1,12 @@
 <template>
     <el-container>
         <el-aside width="220px">
-            <el-scrollbar class="wrap-menu">
+            <el-scrollbar class="wrap-menu" style="height: 100%">
                 <el-menu
-                        default-active="2"
-                        class="el-menu-vertical-demo"
-                        @open="handleOpen"
-                        @close="handleClose"
+                        default-active="1"
                         background-color="#545c64"
                         text-color="#fff"
                         active-text-color="#ffd04b">
-
                     <el-menu-item index="1">
                         <span slot="title">仪表盘</span>
                     </el-menu-item>
@@ -20,12 +16,14 @@
                     <el-menu-item index="3">
                         <span slot="title">用户</span>
                     </el-menu-item>
-                    <el-menu-item index="3">
+                    <el-menu-item index="4">
                         <span slot="title">权限</span>
                     </el-menu-item>
-                    <el-menu-item index="4">
+                    <el-submenu index="5">
                         <span slot="title">设置</span>
-                    </el-menu-item>
+                        <el-menu-item index="5-1">选项1</el-menu-item>
+                        <el-menu-item index="5-2">选项2</el-menu-item>
+                    </el-submenu>
                 </el-menu>
             </el-scrollbar>
         </el-aside>
@@ -38,13 +36,12 @@
 <style lang="scss">
     .el-aside {
         position: fixed;
-        width: 220px;
         height: 100%;
         background: #545c64;
     }
 
-    .el-aside .wrap-menu {
-        height: 100%;
+    .el-menu {
+        border: 0;
     }
 
     .el-aside .el-scrollbar__wrap {
