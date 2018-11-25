@@ -7,22 +7,28 @@
                         background-color="#545c64"
                         text-color="#fff"
                         active-text-color="#ffd04b">
-                    <el-menu-item index="1">
+                    <el-submenu index="1">
                         <span slot="title">仪表盘</span>
-                    </el-menu-item>
-                    <el-menu-item index="2">
-                        <span slot="title">帖子</span>
-                    </el-menu-item>
-                    <el-menu-item index="3">
+                        <el-menu-item index="1-1">检查更新</el-menu-item>
+                    </el-submenu>
+                    <el-submenu index="2">
+                        <span slot="title">内容</span>
+                        <el-menu-item index="2-1">帖子列表</el-menu-item>
+                        <el-menu-item index="2-2">帖子审核</el-menu-item>
+                        <el-menu-item index="2-3">分类列表</el-menu-item>
+                    </el-submenu>
+                    <el-submenu index="3">
                         <span slot="title">用户</span>
-                    </el-menu-item>
-                    <el-menu-item index="4">
-                        <span slot="title">权限</span>
-                    </el-menu-item>
-                    <el-submenu index="5">
+                        <el-menu-item index="3-1">列表</el-menu-item>
+                        <el-menu-item index="3-2">添加</el-menu-item>
+                        <el-menu-item index="3-3">审核</el-menu-item>
+                        <el-menu-item index="3-4">黑名单</el-menu-item>
+                    </el-submenu>
+                    <el-submenu index="4">
                         <span slot="title">设置</span>
-                        <el-menu-item index="5-1">选项1</el-menu-item>
-                        <el-menu-item index="5-2">选项2</el-menu-item>
+                        <el-menu-item index="4-1">网站信息</el-menu-item>
+                        <el-menu-item index="4-2">安全防护</el-menu-item>
+                        <el-menu-item index="4-3">权限管理</el-menu-item>
                     </el-submenu>
                 </el-menu>
             </el-scrollbar>
@@ -42,6 +48,10 @@
 
     .el-menu {
         border: 0;
+    }
+
+    .el-menu-item {
+        font-size: 12px;
     }
 
     .el-aside .el-scrollbar__wrap {
